@@ -20,7 +20,7 @@ public class ServicoBusca {
 			String line = br.readLine();
 
 			while (line != null) {
-				if (line.startsWith(termoBusca)) {
+				if (line.regionMatches(true, 0, termoBusca, 0, termoBusca.length())) {
 					System.out.println(line + " - Arquivo: " + nomeArquivo);
 				}
 				line = br.readLine();
